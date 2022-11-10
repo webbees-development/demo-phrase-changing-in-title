@@ -1,0 +1,38 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+h1 {
+    font-family: "Avenir Next", "Roboto", sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+}
+
+h1::before {
+    content: 'Awesome ';
+    display: block;
+    font-family: "Avenir Next", "Roboto", sans-serif;
+    font-weight: 800;
+    animation: mywordchange 6s infinite ease;
+}
+
+@keyframes mywordchange {
+    0% { content: 'Leveraging '; opacity: 0; }
+    16% { content: 'Leveraging '; opacity: 1; }
+    32% { content: 'Leveraging '; opacity: 0; }
+    33% { content: 'Transformung '; opacity: 0; }
+    50% { content: 'Transformung '; opacity: 1; }
+    65% { content: 'Transformung '; opacity: 0; }
+    66% { content: 'Energising '; opacity: 0; }
+    84% { content: 'Energising '; opacity: 1; }
+    99% { content: 'Energising '; opacity: 0; }
+    100% { content: 'Leveraging '; opacity: 0; }
+}
